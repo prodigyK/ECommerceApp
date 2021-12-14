@@ -26,3 +26,17 @@ TextStyle headingStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.black,
 );
+
+InputDecoration otpInputDecoration = InputDecoration(
+  contentPadding: EdgeInsets.symmetric(vertical: getProportionalScreenHeight(15)),
+  border: outlineInputBorder(),
+  enabledBorder: outlineInputBorder(),
+  focusedBorder: outlineInputBorder(),
+);
+
+OutlineInputBorder outlineInputBorder() {
+  return OutlineInputBorder(
+    borderRadius: BorderRadius.circular(getProportionalScreenWidth(15)),
+    borderSide: const BorderSide(color: kTextColor),
+  );
+}
